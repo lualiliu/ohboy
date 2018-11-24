@@ -3,7 +3,7 @@
 CC = gcc
 LD = $(CC)
 
-CFLAGS = -O3
+CFLAGS = -O0 -g
 LDFLAGS = -s
 
 GNUBOY = ./gnuboy
@@ -26,7 +26,7 @@ LIBS =  -lSDLmain -lSDL
 
 # Use SDL_image - for use with SFont (rather than FREETYPE_TTF)
 # NOTE can still use SFont without SDL_image
-#USE_SDL_IMAGE = True
+USE_SDL_IMAGE = True
 ifdef USE_SDL_IMAGE
 	LIBS +=  -lSDL_image
 	DEFS += -DOHBOY_USE_SDL_IMAGE

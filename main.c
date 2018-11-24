@@ -2250,11 +2250,11 @@ int main(int argc, char *argv[]){
 #ifdef DINGOO_OPENDINGUX
 	screen = SDL_SetVideoMode(320, 240, 16, SDL_HWSURFACE | SDL_DOUBLEBUF);
 #else
-	const SDL_VideoInfo* vInfo = SDL_GetVideoInfo();
-	int nResX = vInfo->current_w;
-	int nResY = vInfo->current_h;
-	int nDepth = vInfo->vfmt->BitsPerPixel;
-	screen = SDL_SetVideoMode(nResX, nResY, nDepth, SDL_HWSURFACE);
+	//const SDL_VideoInfo* vInfo = SDL_GetVideoInfo();
+	//int nResX = vInfo->current_w;
+	//int nResY = vInfo->current_h;
+	//int nDepth = vInfo->vfmt->BitsPerPixel;
+	screen = SDL_SetVideoMode(320, 240, 16, SDL_HWSURFACE);
 #endif /* DINGOO_OPENDINGUX */
 #endif /* WIZ */
 	SDL_ShowCursor(0);
